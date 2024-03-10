@@ -162,6 +162,7 @@
     background-repeat: no-repeat;
     height: 100px;
     
+    
 }
 
         #wedding-details {
@@ -194,7 +195,7 @@
 
         #activity-list {
             background-image: url('yellow-bkg.jpg');
-            height: 520px;
+            height: 900px;
             background-size: cover;
             background-position: center;
             padding: 100px 0;
@@ -349,16 +350,7 @@
         <a href="#contact">Kontakt</a>
     </nav>
 
-    <!-- Mobile-Navigation -->
-    <nav class="nav-mobile" style="font-weight: bold;">
-        <a href="#event-details-pic">Galerie</a> |
-        <a href="#event-details">Veranstaltungsdetails</a> |
-        <a href="#wedding-details">Hochzeit</a> |
-        <a href="#celebration-dinner">Hochzeitfeier</a> |
-        <a href="#accommodation">Unterkunft</a> |
-        <a href="#rsvp">Einladung</a> |
-        <a href="#contact">Kontakt</a>
-    </nav>
+ 
 </header>
 
 <section id="intro" style="position: relative;">
@@ -558,62 +550,65 @@
 <section id="activity-list" style="position: relative; padding: 0 20px;">
     <div class="container">
         <div class="section-content" style="position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
-            <h2 class="section-title" style="font-family: 'Poiret One', cursive; font-size: 40px; margin-bottom: 40px; color: #000000;">
+            <h2 class="section-title" style="font-family: 'Poiret One', cursive; font-size: 32px; margin-bottom: 40px; color: #000000;">
                 <div style="display: flex; align-items: center; margin-bottom: 10px;">
                     <div style="flex: 1;">
                         Erkundet das historische Schloss Zealand
                     </div>
-                    <img src="act1.jpeg" alt="Activity 1" style="width: 200px; height: 200px; margin-left: 20px;">
+                    <img src="act1.jpeg" alt="Activity 1" style="width: 160px; height: 160px; margin-left: 20px;">
                 </div>
                 <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <img src="act2.jpeg" alt="Activity 2" style="width: 200px; height: 200px; margin-right: 20px;">
+                    <img src="act2.jpeg" alt="Activity 2" style="width: 160px; height: 160px; margin-right: 20px;">
                     <div style="flex: 1;">
                         Besucht das Louisiana Museum of Modern Art
                     </div>
                 </div>
-                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; margin-bottom: 20px">
                     <div style="flex: 1;">
                         Erkundet die Tivoli-Gärten bei Nacht
                     </div>
-                    <img src="act3.jpeg" alt="Activity 3" style="width: 200px; height: 200px; margin-left: 20px">
+                    <img src="act3.jpeg" alt="Activity 3" style="width: 160px; height: 160px; margin-left: 20px">
                 </div>
                 <div style="display: flex; align-items: center;">
-                    <img src="act4.jpeg" alt="Activity 4" style="width: 200px; height: 200px; margin-right: 20px;margin-bottom: 40px">
+                    <img src="act4.jpeg" alt="Activity 4" style="width: 160px; height: 160px; margin-right: 20px;margin-bottom: 40px">
                     <div style="flex: 1;">
                         Unternimm eine Bootstour auf den Kanälen von Kopenhagen
                     </div>
                 </div>
             </h2>
-            <button style="font-family: 'Poiret One', cursive; font-size: 16px; background-color: rgba(51, 51, 51, 0.7); color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"><a href="https://www.visitcopenhagen.com/copenhagen/activities/summer/essential-guide-summer-copenhagen" style="color: #fff; text-decoration: none;"> Weitere spaßige Aktivitäten in Kopenhagen</a></button>
+            <button style="font-family: 'Poiret One', cursive; font-size: 20px; background-color: rgba(51, 51, 51, 0.7); color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"><a href="https://www.visitcopenhagen.com/copenhagen/activities/summer/essential-guide-summer-copenhagen" style="color: #fff; text-decoration: none;"> Weitere spaßige Aktivitäten in Kopenhagen</a></button>
         </div>
     </div>
 </section>
 
-<section id="activity-list">
-    <div class="container">
-    </div>
-</section>
 
-<section id="rsvp" style="font-family: 'Poiret One', cursive;">
-    <div class="container">
-        <h2 class="section-title" style="font-size: 42px; margin-bottom: 20px;">Schließt euch unserer Feier an&nbsp;</h2> <!-- German translation -->
-        <form action="https://formspree.io/f/mwkgqbjz" method="POST">
-            <label for="name">Name</label> <!-- German translation -->
-            <input type="text" id="name" name="name" required>
 
-            <label for="mobile">Handynummer</label> <!-- German translation -->
-            <input type="tel" id="mobile" name="mobile" required>
+<section id="rsvp" style="font-family: 'Poiret One', cursive; padding: 50px 20px;">
+    <div class="container" style="max-width: 600px; margin: 0 auto;">
+        <h2 class="section-title" style="font-size: 45px; margin-bottom: 30px;">Schließt euch unserer Feier an</h2> <!-- German translation -->
+        <form action="https://formspree.io/f/mwkgqbjz" method="POST" style="text-align: left;">
+            <div style="margin-bottom: 20px;">
+                <label for="name" style="font-size: 20px;">Name</label> <!-- German translation -->
+                <input type="text" id="name" name="name" required style="font-size: 20px; padding: 10px; width: 100%; box-sizing: border-box;">
+            </div>
 
-            <label for="attend">Bist du dabei ?</label> <!-- German translation -->
-            <select id="attend" name="attend" required onchange="toggleMenu(this.value)">
-                <option value="">Auswählen...</option>
-                <option value="yes">Ja, ich werde dabei sein</option> <!-- German translation -->
-                <option value="no">Entschuldigung, ich kann nicht kommen</option> <!-- German translation -->
-            </select>
+            <div style="margin-bottom: 20px;">
+                <label for="mobile" style="font-size: 20px;">Handynummer</label> <!-- German translation -->
+                <input type="tel" id="mobile" name="mobile" required style="font-size: 20px; padding: 10px; width: 100%; box-sizing: border-box;">
+            </div>
 
-            <div id="menuSelection" style="display: none;">
-                <label for="menu">Deine Menüauswahl im Restaurant</label> <!-- German translation -->
-                <select id="menu" name="menu" required>
+            <div style="margin-bottom: 20px;">
+                <label for="attend" style="font-size: 20px;">Bist du dabei ?</label> <!-- German translation -->
+                <select id="attend" name="attend" required onchange="toggleMenu(this.value)" style="font-size: 20px; padding: 10px; width: 100%; box-sizing: border-box;">
+                    <option value="">Auswählen...</option>
+                    <option value="yes">Ja, ich werde dabei sein</option> <!-- German translation -->
+                    <option value="no">Entschuldigung, ich kann nicht kommen</option> <!-- German translation -->
+                </select>
+            </div>
+
+            <div id="menuSelection" style="display: none; margin-bottom: 20px;">
+                <label for="menu" style="font-size: 20px;">Deine Menüauswahl im Restaurant</label> <!-- German translation -->
+                <select id="menu" name="menu" required style="font-size: 20px; padding: 10px; width: 100%; box-sizing: border-box;">
                     <option value="">Auswählen...</option>
                     <option value="Tasting">Tasting Menü</option> <!-- German translation -->
                     <option value="Vegetarian">Vegetarisches Tasting Menü</option> <!-- German translation -->
@@ -621,20 +616,20 @@
                 </select>
             </div>
 
-            <div id="plusOne" style="display: none;">
-                <label for="guest">Bringt du eine Begleitung ?</label> <!-- German translation -->
-                <select id="guest" name="guest" onchange="toggleGuestInfo(this.value)">
+            <div id="plusOne" style="display: none; margin-bottom: 20px;">
+                <label for="guest" style="font-size: 20px;">Bringt du eine Begleitung ?</label> <!-- German translation -->
+                <select id="guest" name="guest" onchange="toggleGuestInfo(this.value)" style="font-size: 20px; padding: 10px; width: 100%; box-sizing: border-box;">
                     <option value="no">Nein</option> <!-- German translation -->
                     <option value="yes">Ja</option> <!-- German translation -->
                 </select>
             </div>
 
-            <div id="guestInfo" style="display: none;">
-                <label for="guestName">Name der Begleitung</label> <!-- German translation -->
-                <input type="text" id="guestName" name="guestName">
+            <div id="guestInfo" style="display: none; margin-bottom: 20px;">
+                <label for="guestName" style="font-size: 20px;">Name der Begleitung</label> <!-- German translation -->
+                <input type="text" id="guestName" name="guestName" style="font-size: 20px; padding: 10px; width: 100%; box-sizing: border-box;">
 
-                <label for="guestMenu">Menüauswahl für die Begleitung</label> <!-- German translation -->
-                <select id="guestMenu" name="guestMenu">
+                <label for="guestMenu" style="font-size: 20px;">Menüauswahl für die Begleitung</label> <!-- German translation -->
+                <select id="guestMenu" name="guestMenu" style="font-size: 20px; padding: 10px; width: 100%; box-sizing: border-box;">
                     <option value="">Auswählen...</option>
                     <option value="Tasting">Tasting Menü</option> <!-- German translation -->
                     <option value="Vegetarian">Vegetarisches Tasting Menü</option> <!-- German translation -->
@@ -642,7 +637,7 @@
                 </select>
             </div>
 
-            <button type="submit">Absenden</button> <!-- German translation -->
+            <button type="submit" style="font-size: 20px; padding: 10px 20px; background-color: rgba(51, 51, 51, 0.7); color: #fff; border: none; border-radius: 5px; cursor: pointer;">Absenden</button> <!-- German translation -->
         </form>
     </div>
 </section>
@@ -684,26 +679,6 @@
     }
 </script>
 
-<script>
-    document.getElementById("attend").addEventListener("change", function() {
-        var guestDiv = document.getElementById("guestDiv");
-        if (this.value === "yes") {
-            guestDiv.style.display = "block";
-        } else {
-            guestDiv.style.display = "none";
-            document.getElementById("guestName").style.display = "none";
-        }
-    });
-
-    document.getElementById("guest").addEventListener("change", function() {
-        var guestName = document.getElementById("guestName");
-        if (this.value === "yes") {
-            guestName.style.display = "block";
-        } else {
-            guestName.style.display = "none";
-        }
-    });
-</script>
 
 
 <section id="contact" style="font-family: 'Poiret One', cursive;">
@@ -715,7 +690,7 @@
     </div>
 </section>
 
-<footer>
+<footer style="text-align: center;">
     <div class="container">
         <p>&copy; 2024 Neelam & Lars</p>
     </div>

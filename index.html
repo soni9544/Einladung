@@ -60,9 +60,26 @@
             margin-bottom: 20px;
         }
 
+        .bold-text {
+    font-weight: bold; /* Make the text bold */
+    /* Add border to the text */
+    border: 2px solid #000; /* Border color */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the border */
+}
+
+.bold-text1 {
+    font-weight: bold; /* Make the text bold */
+    /* Add border to the text */
+    border: 3px solid #ffffff; /* Border color and thickness */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the border */
+}
+
         .bottom-text {
             position: absolute;
-            bottom: 30px; /* Adjust as needed */
+            bottom: 20px; /* Adjust as needed */
+            margin-bottom: 5px;
             left: 0;
             right: 0;
         }
@@ -126,7 +143,8 @@
 
             .invitationtext4 {
                 font-size: 50px; /* Adjusted font size for mobile */
-                margin-bottom: 40px;
+                margin-top: 10px;
+                margin-bottom: 20px;
                 text-align: center;
                 font-family: 'Poiret One', cursive;
                 color: #000000;
@@ -225,11 +243,11 @@
             }
 
             .bottom-text {
-                bottom: 25px; /* Adjusted bottom position for mobile */
+                bottom: 20px; /* Adjusted bottom position for mobile */
             }
 
             .invitation {
-                font-size: 20px; /* Adjusted font size for mobile */
+                font-size: 18px; /* Adjusted font size for mobile */
                 margin-bottom: 8px;
             }
 
@@ -353,14 +371,14 @@
  
 </header>
 
-<section id="intro" style="position: relative;">
-    <div class="bottom-text">
+
+
+<section id="intro" style="position: relative; text-align: center;">
+    <div class="bottom-text" style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);">
         <div class="invitation">Einladung zu unserer Hochzeit</div>
         <div class="invitation-date">06 Juli 2024</div>
     </div>
 </section>
-
-
 
 <!-- Add sections and content below -->
 <section id="event-details-pic" style="position: relative;">
@@ -460,21 +478,20 @@
 
 <section id="wedding-details1" style="position: relative;">
     <div class="container">
-    <div class="invitationtext4">
-        <div>
-            <p>Hochzeit
+        <div class="invitationtext4">
+            <div>
+                <p class="bold-text">Hochzeit</p>
+            </div>
         </div>
-    </div>
         <div class="invitationtext5">
             <div>
-                <p>Am 6. Juli 2024 <br>  
+                <p class="bold-text">Am 6. Juli 2024 <br>  
                 um 12:30 Uhr <br>  
                 im Rathaus von Kopenhagen</p>
             </div>
         </div>
     </div>
 </section>
-
 
 <section id="wedding-details">
     <div class="container">
@@ -486,28 +503,25 @@
 
 <section id="celebration-dinner" style="position: relative;">
     <div class="container">
-    <!-- Image -->
-    <img src="zahida.jpg" style="position: absolute; top: 0; left: 0; width: auto; height: 200%;" alt="Zahida Image">
-    <!-- Content -->
-    <div class="invitationtext1">
-        <div>
-            <p>Hochzeitfeier 
+        <!-- Image -->
+        <img src="zahida.jpg" style="position: absolute; top: 0; left: 0; width: auto; height: 200%;" alt="Zahida Image">
+        <!-- Content -->
+        <div class="invitationtext1 bold-text1">
+            <div>
+                <p>Hochzeitfeier</p>
+            </div>
         </div>
-    </div>
-        <div class="invitationtext2">
+        <div class="invitationtext2 bold-text1">
             <div>
                 <p>Am 6. Juli 2024 <br>  
                 um 17:30 Uhr <br>  
-                im Zahida, <br>
-                Kopenhagen</p>
+                im Zahida, <br> Kopenhagen</p>
             </div>
         </div>
         <div class="invitationtext3">
-                <li><a href="ZAHIDA_MENU_ENGLISH.pdf" target="_blank" style="font-size: 16px; color: orange; margin-bottom: 20px;">English Menu</a></li>
-                <li><a href="ZAHIDA_MENU_DEUTSCH.pdf" target="_blank" style="font-size: 16px; color: orange;">Deutsche Speisekarte</a></li>
-          
+            <li><a href="ZAHIDA_MENU_ENGLISH.pdf" target="_blank" style="font-size: 16px; color: orange; margin-bottom: 20px;">English Menu</a></li>
+            <li><a href="ZAHIDA_MENU_DEUTSCH.pdf" target="_blank" style="font-size: 16px; color: orange;">Deutsche Speisekarte</a></li>
         </div>
-        
     </div>
 </section>
 

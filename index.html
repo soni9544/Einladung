@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <style>
-        /* Gemeinsame Stile */
+        /* Common Styles */
         body {
             font-family: 'Segoe Script', cursive;
             margin: 0;
@@ -48,61 +48,52 @@
             color: #fff;
         }
 
-        /* Desktop-Stile */
-        @media (min-width: 768px) {
-            .nav-desktop {
-                display: block;
-            }
-
-            .nav-mobile {
-                display: none;
-            }
-        }
-
-        /* Mobile-Stile */
-        @media (max-width: 767px) {
-            .nav-desktop {
-                display: none;
-            }
-
-            .nav-mobile {
-                display: block;
-            }
-        }
-
+        /* Default Desktop Styles */
         #intro {
-    position: relative;
-    background-image: url('ring-bkg-new.jpg');
-    background-repeat: no-repeat; /* Prevent background from repeating */
-    height: 400px;
-    background-size: contain; /* Adjusted property */
-    background-position: center;
-    text-align: center;
-    color: #fff;
-}
+            position: relative;
+            background-image: url('ring-bkg-new.jpg');
+            background-repeat: no-repeat; /* Prevent background from repeating */
+            height: 500px;
+            background-size: 80% auto; /* Adjusted property */
+            background-position: center;
+            text-align: center;
+            color: #fff;
+        }
 
-.bottom-text {
-    position: absolute;
-    bottom: 15px; /* Adjust as needed */
-    left: 0;
-    right: 0;
-}
+        .bottom-text {
+            position: absolute;
+            bottom: 15px; /* Adjust as needed */
+            left: 0;
+            right: 0;
+        }
 
-.invitation {
-    font-family: 'Poiret One', cursive;
-    font-size: 30px;
-    color: #ff6200;
-    margin-bottom: 10px;
-}
+        .invitation {
+            font-family: 'Poiret One', cursive;
+            font-size: 30px;
+            color: #ff6200;
+            margin-bottom: 10px;
+        }
 
-.invitation-date {
-    font-family: 'Poiret One', cursive;
-    font-size: 20px;
-    color: #333; /* Dark gray color */
-    margin-bottom: 10px;
-}
-        /* Additional section styles */
-        /* Insert additional styles here */
+        .invitation-date {
+            font-family: 'Poiret One', cursive;
+            font-size: 20px;
+            color: #333; /* Dark gray color */
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 767px) {
+            #intro {
+                height: 600px; /* Adjusted height for mobile */
+            }
+
+            .invitation {
+                font-size: 40px; /* Adjusted font size for mobile */
+            }
+
+            .invitation-date {
+                font-size: 30px; /* Adjusted font size for mobile */
+            }
+        }
 
     </style>
     <title>Neelam und Lars Hochzeit Einladung</title>
@@ -132,7 +123,6 @@
         <a href="#contact">Kontakt</a>
     </nav>
 </header>
-
 
 <section id="intro" style="position: relative;">
     <div class="bottom-text">

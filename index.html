@@ -81,6 +81,10 @@
             margin-bottom: 25px;
         }
 
+        #event-details-pic1 {
+            background-image: url('photo-bkg.jpg');
+        }
+
         #event-details-pic {
             background-image: url('photo-bkg.jpg');
             background-size: cover; /* Adjusted property */
@@ -110,6 +114,7 @@
 
         #celebration-dinner {
             background-image: url('event-bkg.jpg');
+            height: 200px;
         }
 
         /* Media Queries for Mobile */
@@ -132,8 +137,9 @@
                 font-size: 15px; /* Adjusted font size for mobile */
                 margin-bottom: 10px;
             }
-            #event-details-pic {
+            #event-details-pic1 {
             background-image: url('photo-bkg.jpg');
+            background-size: cover;
             background-repeat: no-repeat; /* Prevent background from repeating */
                 
             }
@@ -149,14 +155,14 @@
           #wedding-details {
             background-image: url('hall-bkg3.jpg');
             background-position: center;
-            background-size: cover; /* Adjusted property */
             background-repeat: no-repeat; /* Prevent background from repeating */
+            height: 400px;
         }
         #celebration-dinner {
-            background-image: url('res-bkg.jpg');
-            background-size: cover;
+            background-image: url('event-bkg.jpg');
             background-position: center;
             background-repeat: no-repeat; /* Prevent background from repeating */
+            
         }
 
         }
@@ -299,6 +305,34 @@
         <!-- Content for wedding details -->
     </div>
 </section>
+
+<section id="celebration-dinner" style="position: relative;">
+    <!-- Image -->
+    <img src="zahida.jpg" style="position: absolute; top: 0; left: 0; width: auto; height: 200%;" alt="Zahida Image">
+    <!-- Content -->
+    <div class="container" style="position: relative; z-index: 1;">
+        <!-- Your content here -->
+    </div>
+</section>
+
+<!-- Mobile version -->
+<section id="celebration-dinner-mobile" style="display: none; position: relative;">
+    <!-- Image for mobile -->
+    <img src="zahida.jpg" style="width: 10%; height: 10%;" alt="Zahida Mobile Image">
+    <!-- Content for mobile (if any) -->
+</section>
+
+<!-- Media query for mobile -->
+<style>
+    @media (max-width: 767px) {
+        #celebration-dinner {
+            display: none;
+        }
+        #celebration-dinner-mobile {
+            display: block;
+        }
+    }
+</style>
 
 <section id="celebration-dinner">
     <div class="container">

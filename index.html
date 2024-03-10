@@ -52,17 +52,17 @@
         #intro {
             position: relative;
             background-image: url('ring-bkg-new.jpg');
+            background-size: cover; /* Adjusted property */
             background-repeat: no-repeat; /* Prevent background from repeating */
-            height: 500px;
-            background-size: 80% auto; /* Adjusted property */
+            height: 600px;
             background-position: center;
             text-align: center;
-            color: #fff;
+            margin-bottom: 20px;
         }
 
         .bottom-text {
             position: absolute;
-            bottom: 15px; /* Adjust as needed */
+            bottom: 30px; /* Adjust as needed */
             left: 0;
             right: 0;
         }
@@ -76,29 +76,89 @@
 
         .invitation-date {
             font-family: 'Poiret One', cursive;
+            font-size: 25px;
+            color: #333; /* Dark gray color */
+            margin-bottom: 25px;
+        }
+
+        #event-details-pic {
+            background-image: url('photo-bkg.jpg');
+            background-size: cover; /* Adjusted property */
+            background-repeat: no-repeat; /* Prevent background from repeating */
+            height: 110px;
+            text-align: center;
+        }
+        .bio{
+            font-family: 'Poiret One', cursive;
             font-size: 20px;
             color: #333; /* Dark gray color */
-            margin-bottom: 10px;
+            margin-top: 25px;
+            margin-left: 10px;
+        }
+        .image-bio{
+            margin-right: 10px;
+            margin-top: 25px
+        }
+
+        #event-details {
+            background-image: url('event-bkg.jpg');
+        }
+
+        #wedding-details {
+            background-image: url('yellow-bkg.jpg');
+        }
+
+        #celebration-dinner {
+            background-image: url('event-bkg.jpg');
         }
 
         /* Media Queries for Mobile */
         @media (max-width: 767px) {
             #intro {
-                height: 500px; /* Adjusted height for mobile */
-                background-size: 80% auto; /* Adjusted background size for mobile */
+                background-repeat: no-repeat; /* Prevent background from repeating */
+                height: 220px;
             }
 
             .bottom-text {
-                bottom: 50px; /* Adjusted bottom position for mobile */
+                bottom: 25px; /* Adjusted bottom position for mobile */
             }
 
             .invitation {
-                font-size: 40px; /* Adjusted font size for mobile */
+                font-size: 20px; /* Adjusted font size for mobile */
+                margin-bottom: 8px;
             }
 
             .invitation-date {
-                font-size: 30px; /* Adjusted font size for mobile */
+                font-size: 15px; /* Adjusted font size for mobile */
+                margin-bottom: 10px;
             }
+            #event-details-pic {
+            background-image: url('photo-bkg.jpg');
+            background-repeat: no-repeat; /* Prevent background from repeating */
+                
+            }
+
+           .bio{
+            font-family: 'Poiret One', cursive;
+            font-size: 12px;
+            color: #333; /* Dark gray color */
+            margin-top: 48px;
+            margin-left: 10px;
+          }
+
+          #wedding-details {
+            background-image: url('hall-bkg3.jpg');
+            background-position: center;
+            background-size: cover; /* Adjusted property */
+            background-repeat: no-repeat; /* Prevent background from repeating */
+        }
+        #celebration-dinner {
+            background-image: url('res-bkg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat; /* Prevent background from repeating */
+        }
+
         }
 
     </style>
@@ -137,18 +197,102 @@
     </div>
 </section>
 
+
+
 <!-- Add sections and content below -->
-<section id="event-details-pic">
-    <div class="container">
-        <!-- Content for event details gallery -->
+<section id="event-details-pic" style="position: relative;">
+    <div class="bio" style="text-align: left; position: absolute; top: 0; left: 50%">
+        Es erfüllt uns mit großer Freude,<br>
+        euch zu unserer Hochzeit in der wunderschönen<br>
+        Stadt Kopenhagen einzuladen. Dieser besondere<br>
+        Tag wird unvergessliche Erinnerungen schaffen,<br>
+        die wir gemeinsam mit euch teilen möchten. Lasst<br>
+        uns im Kreise unserer Familie und Freunde den <br>
+        Beginn unseres neuen Lebenskapitels zelebrieren.
+    </div>
+    <div class="image-bio" style="position: absolute; top: 0; right: 0; right: 50%;">
+        <img src="neelars_mob.jpg" alt="Your Image" style="width: 220px; height: 260px;"> 
     </div>
 </section>
 
 <section id="event-details">
     <div class="container">
-        <!-- Content for event details -->
+        <h2 class="section-title" style="font-family: 'Poiret One', cursive; font-size: 40px; margin-bottom: 20px;">Veranstaltungsdetails</h2>
+        <div id="countdown" class="countdown-container" style="font-family: 'Poiret One', cursive;">
+            <div class="countdown-item">
+                <span id="days" class="countdown-value"></span>
+                <span class="countdown-label">Tage</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours" class="countdown-value"></span>
+                <span class="countdown-label">Stunden</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes" class="countdown-value"></span>
+                <span class="countdown-label">Minuten</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds" class="countdown-value"></span>
+                <span class="countdown-label">Sekunden</span>
+            </div>
+        </div>
     </div>
 </section>
+
+<style>
+    .countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Poiret One', cursive;
+}
+
+.countdown-item {
+    margin: 0 10px;
+}
+
+.countdown-value {
+    font-weight: bold;
+}
+
+.countdown-label {
+    margin-left: 5px;
+}
+</style>
+
+<script>
+    // Set the date of the event (6th July 2024 at 12:30 PM)
+    var eventDate = new Date("July 6, 2024 12:30:00").getTime();
+
+    // Update the countdown every second
+    var x = setInterval(function() {
+
+        // Get the current date and time
+        var now = new Date().getTime();
+
+        // Calculate the time remaining until the event
+        var distance = eventDate - now;
+
+        // Calculate days, hours, minutes, and seconds remaining
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown in the respective elements
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        // If the countdown is over, display a message
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "Die Veranstaltung ist jetzt live!";
+        }
+    }, 1000);
+</script>
 
 <section id="wedding-details">
     <div class="container">

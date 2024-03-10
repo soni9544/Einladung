@@ -183,52 +183,21 @@
             font-size: 18px;
         }
 
-        /* Desktop-Stile */
-        @media (min-width: 768px) {
-            .intro {
-                background-image: url('secb.jpg'); /* Mit hochgeladenem Bild ersetzen */
-                background-size: cover;
-                background-position: center;
-                height: 700px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
+      /* Mobile-Stile */
+@media (max-width: 767px) {
+    header .nav-desktop, header .nav-mobile {
+        text-align: center; /* Center the navigation links */
+    }
 
-            .intro h1, .intro h2 {
-                color: #000; /* Changed text color to black */
-            }
+    header .nav-desktop a, header .nav-mobile a {
+        font-size: 16px; /* Adjust font size for mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
 
-            .nav-desktop {
-                display: block;
-            }
-
-            .nav-mobile {
-                display: none;
-            }
-        }
-
-        /* Mobile-Stile */
-        @media (max-width: 767px) {
-            .intro {
-                background-color: #333;
-                color: #fff;
-                padding: 20px 0;
-            }
-
-            .intro h1, .intro h2 {
-                color: #fff;
-            }
-
-            .nav-desktop {
-                display: none;
-            }
-
-            .nav-mobile {
-                display: block;
-            }
-        }
+    header .nav-mobile {
+        display: block; /* Display mobile navigation links */
+    }
+}
         /* Additional section styles */
         #event-details-pic {
             background-image: url('photo-bkg1c.jpg');
